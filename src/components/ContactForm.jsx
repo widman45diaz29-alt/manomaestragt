@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Send, Phone } from 'lucide-react';
-import { useSite } from '../context/site-context';
+import { useSite } from '../context/SiteContext';
 
 const clean = (value) => value.replace(/[<>]/g, '').trim();
 

@@ -1,6 +1,4 @@
-
-import { useEffect, useMemo, useState } from 'react';
-
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
@@ -8,7 +6,9 @@ import { db, storage, firebaseReady } from '../lib/firebase';
 import { defaultSiteConfig } from '../config/siteConfig';
 import { defaultServices } from '../config/services';
 
-import { SiteContext } from './site-context';
+export const SiteContext = createContext(null);
+
+export const useSite = () => useContext(SiteContext);
 
 export function SiteProvider({ children }) {
   const [config, setConfig] = useState(defaultSiteConfig);

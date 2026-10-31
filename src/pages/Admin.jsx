@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { Save, ShieldAlert } from 'lucide-react';
 
-import { useAuth } from '../context/auth-context';
-import { useSite } from '../context/site-context';
+import { useAuth } from '../context/AuthContext';
+import { useSite } from '../context/SiteContext';
 
 function AdminEditor({ config, services, save, uploadImage }) {
   const [c, setC] = useState(config);
