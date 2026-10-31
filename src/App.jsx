@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import LoginDialog from './components/LoginDialog';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
