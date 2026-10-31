@@ -2,7 +2,7 @@ import { useSite } from '../context/SiteContext';
 
 export function WhatsAppButton() {
   const { config } = useSite();
-  const phone = config?.phone || '50200000000'; // Número por defecto o de la config
+  const phone = config?.phone || '50200000000';
   const message = encodeURIComponent('¡Hola! Me interesa solicitar información sobre sus servicios de Mano Maestra GT.');
   
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
@@ -15,7 +15,6 @@ export function WhatsAppButton() {
       className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 flex items-center justify-center"
       aria-label="Contactar por WhatsApp"
     >
-      {/* Icono de WhatsApp o SVG */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-7 h-7"
