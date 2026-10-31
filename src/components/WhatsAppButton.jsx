@@ -1,1 +1,24 @@
-import {MessageCircle} from 'lucide-react';import { useSite } from '../context/SiteContext';export default function WhatsAppButton(){const{config}=useSite();if(!config.whatsappE164)return null;const href=`https://wa.me/${config.whatsappE164.replace(/\D/g,'')}?text=${encodeURIComponent(config.whatsappMessage)}`;return <a className="wa-float" href={href} target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp"><MessageCircle/></a>}
+import { MessageCircle } from 'lucide-react';
+import { useSite } from '../context/SiteContext';
+
+export function WhatsAppButton() {
+  const { config } = useSite();
+
+  if (!config.whatsappE164) return null;
+
+  const href = `https://wa.me/${config.whatsappE164.replace(/\D/g, '')}?text=${encodeURIComponent(config.whatsappMessage)}`;
+
+  return (
+    <a
+      className="wa-float"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Escribir por WhatsApp"
+    >
+      <MessageCircle />
+    </a>
+  );
+}
+
+export default WhatsAppButton;
