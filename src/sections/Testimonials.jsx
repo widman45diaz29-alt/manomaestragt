@@ -1,0 +1,1 @@
+export default function Testimonials({visible}){if(!visible)return null;return <section className="section"><div className="container"><h2>Opiniones de clientes</h2><p>Próximamente se publicarán referencias auténticas y verificadas.</p></div></section>}
